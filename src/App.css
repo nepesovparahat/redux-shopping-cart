@@ -1,38 +1,141 @@
-.App {
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+ 
+}
+body {
+	font-family: "Cabin", Arial, Geneva, sans-serif;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.cart{
+  width: 40px;
+  height: 40px;
+  
+}
+.cart-icon{
+  background-image: url('/src/assets/images/shop.svg');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
   text-align: center;
+  display: none;
+  padding-left: 10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+  list-style-type: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  background: rgb(5, 115, 143);
+  /* position: sticky;
+  z-index: 10;
+  top:0; */
+}
+nav .logobtn{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgb(5, 115, 143);
+  border-bottom: 1px solid lightgray;
 }
-
-.App-link {
-  color: #61dafb;
+.nav{
+  max-width: 1200px;
+  margin:0 auto;
+  background:rgb(5, 115, 143);
 }
+.nav .logobtn a img{
+  width: 120px;
+  margin-right: 5px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.nav .logobtn a{
+  color: #fff;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+}
+.nav .logobtn a:hover{
+  opacity: 0.9;
+}
+.nav .logobtn .hamburger {
+  border: 1px solid #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+.nav .logobtn .hamburger .bar {
+background: lightgray;
+width: 35px;
+height: 3px;
+margin: 4px;
+}
+.links li a {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+.links li a:hover{
+  color: lightgray;
+  padding: 10px 20px;
+}
+.shopping-mb{
+  display: block;
+  display: flex;
+  align-self: center;
+  margin-top: 5px;
+}
+.shopping-mb span{
+  columns: #fff;
+  position: absolute;
+  color:#fff;
+  cursor: pointer;
+  background: red;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 50%;
+  z-index: -10px;
+}
+.link-navigation{
+  background: rgb(5, 115, 143);
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  transform: translateX(-100%);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.query-links-navigation{
+  background: rgb(5, 115, 143);
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.link-btn{
+  margin: 10px 20px;
+  position: relative;
+  text-align: right;
+  font-size:30px;
+  color: #fff;
+}
+.link-btn span{
+  cursor: pointer;
+}
+@media screen and (min-width:480px){
+  .nav .logobtn .hamburger {
+    display: none;
+   
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }

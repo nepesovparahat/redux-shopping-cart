@@ -365,7 +365,6 @@ const data_shop =  [
               }
         ]
     
-
 export default data_shop;
 
 
