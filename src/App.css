@@ -1,141 +1,104 @@
-
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
- 
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 body {
 	font-family: "Cabin", Arial, Geneva, sans-serif;
-  margin: 0 auto;
-  padding: 0 auto;
+}
+.images {
+	width: 10pc;
 }
 
-.cart{
-  width: 40px;
-  height: 40px;
-  
-}
-.cart-icon{
-  background-image: url('/src/assets/images/shop.svg');
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  display: none;
-  padding-left: 10px;
-}
-li{
-  list-style-type: none;
-}
-a{
-  text-decoration: none;
-}
-.navbar{
-  background: rgb(5, 115, 143);
-  /* position: sticky;
-  z-index: 10;
-  top:0; */
-}
-nav .logobtn{
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  align-items: center;
-  background: rgb(5, 115, 143);
-  border-bottom: 1px solid lightgray;
-}
-.nav{
-  max-width: 1200px;
-  margin:0 auto;
-  background:rgb(5, 115, 143);
-}
-.nav .logobtn a img{
-  width: 120px;
-  margin-right: 5px;
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
+	background-color: #046f8a;
 }
-.nav .logobtn a{
-  color: #fff;
-  opacity: 1;
-  display: flex;
-  align-items: center;
+.cart {
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	width: 22px;
 }
-.nav .logobtn a:hover{
-  opacity: 0.9;
+nav .link-navigation {
+	flex-grow: 1;
 }
-.nav .logobtn .hamburger {
-  border: 1px solid #fff;
-  display: inline-block;
-  cursor: pointer;
+.cart-icon {
+	background-image: url("/src/assets/images/basket.svg");
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	padding-top: 15px;
+	padding-left: 9px;
 }
-.nav .logobtn .hamburger .bar {
-background: lightgray;
-width: 35px;
-height: 3px;
-margin: 4px;
+nav ul {
+	list-style-type: none;
+	padding: 0.75em;
+	margin: 0;
+	overflow: auto;
 }
-.links li a {
-  font-size: 18px;
-  color: #fff;
-  padding: 10px;
-  transition: all 0.5s ease-in-out;
-  display: block;
+/* splits nav into 2 columns
+http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
+nav li:nth-child(even) {
+	width: 50%;
+	float: right;
+	padding: 0.5em;
 }
-.links li a:hover{
-  color: lightgray;
-  padding: 10px 20px;
+nav li:nth-child(odd) {
+	width: 50%;
+	float: left;
+	padding: 0.5em;
 }
-.shopping-mb{
-  display: block;
-  display: flex;
-  align-self: center;
-  margin-top: 5px;
+nav a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	padding-left: 3.333333%;
 }
-.shopping-mb span{
-  columns: #fff;
-  position: absolute;
-  color:#fff;
-  cursor: pointer;
-  background: red;
-  width: 25px;
-  height: 25px;
-  font-weight: bold;
-  border-radius: 50%;
-  z-index: -10px;
+nav a:hover {
+	color: #ffffff;
 }
-.link-navigation{
-  background: rgb(5, 115, 143);
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  transform: translateX(-100%);
-  width: 100%;
-  transition: all 0.5s ease-in-out;
+li {
+	list-style-type: none;
 }
-.query-links-navigation{
-  background: rgb(5, 115, 143);
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  transition: all 0.5s ease-in-out;
+a {
+	text-decoration: none;
 }
-.link-btn{
-  margin: 10px 20px;
-  position: relative;
-  text-align: right;
-  font-size:30px;
-  color: #fff;
+li:nth-child(even) {
+	width: 50%;
+	float: right;
 }
-.link-btn span{
-  cursor: pointer;
+li:nth-child(odd) {
+	width: 50%;
+	float: left;
 }
-@media screen and (min-width:480px){
-  .nav .logobtn .hamburger {
-    display: none;
-   
-  }
-
+.nav .logobtn a img {
+	width: 120px;
+	margin-right: 5px;
+}
+.div-icon {
+	width: 140px;
+}
+@media (min-width: 550px) {
+	nav li,
+	nav li:nth-child(even),
+	nav li:nth-child(odd) {
+		display: inline-block;
+		width: auto;
+		float: none;
+		padding: 0;
+	}
+	nav a {
+		padding: 0em 1em;
+	}
+}
+.nav-logo {
+	width: 60px;
 }

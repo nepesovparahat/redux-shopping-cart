@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from "react";
+import data from "../assets/data";
+import Product from "./Product";
 
 const Products = () => {
-    return (
-        <div>
-            products page
-        </div>
-    )
-}
+	const [product, setproduct] = useState(data);
 
-export default Products
+	return (
+		<div className="products">
+			<div className="product-center">
+				{product.map((item) => (
+					<Product key={item.id} item={item} />
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default Products;
