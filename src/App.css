@@ -1,104 +1,159 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 body {
-	font-family: "Cabin", Arial, Geneva, sans-serif;
-}
-.images {
-	width: 10pc;
+  font-family: "Cabin", Arial, Geneva, sans-serif;
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-	background-color: #046f8a;
+  background-color: #046f8a;
 }
 .cart {
-	border-radius: 50%;
-	background-color: red;
-	text-align: center;
-	width: 22px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  width: 18px;
+  height: 18px;
 }
 nav .link-navigation {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 .cart-icon {
-	background-image: url("/src/assets/images/basket.svg");
-	background-repeat: no-repeat;
-	width: 40px;
-	height: 40px;
-	padding-top: 15px;
-	padding-left: 9px;
+  background-image: url("/src/assets/images/shop.svg");
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  padding-left: 20px;
 }
 nav ul {
-	list-style-type: none;
-	padding: 0.75em;
-	margin: 0;
-	overflow: auto;
+  list-style-type: none;
+  padding: 0.75em;
+  margin: 0;
+  overflow: auto;
 }
 /* splits nav into 2 columns
 http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
 nav li:nth-child(even) {
-	width: 50%;
-	float: right;
-	padding: 0.5em;
+  width: 50%;
+  float: right;
+  padding: 0.5em;
 }
 nav li:nth-child(odd) {
-	width: 50%;
-	float: left;
-	padding: 0.5em;
+  width: 50%;
+  float: left;
+  padding: 0.5em;
 }
 nav a {
-	color: #fff;
-	font-weight: bold;
-	text-decoration: none;
-	display: block;
-	padding-left: 3.333333%;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding-left: 3.333333%;
 }
 nav a:hover {
-	color: #ffffff;
-}
-li {
-	list-style-type: none;
+  color: #ffffff;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 li:nth-child(even) {
-	width: 50%;
-	float: right;
+  width: 50%;
+  float: right;
 }
 li:nth-child(odd) {
-	width: 50%;
-	float: left;
+  width: 50%;
+  float: left;
 }
 .nav .logobtn a img {
-	width: 120px;
-	margin-right: 5px;
+  width: 120px;
+  margin-right: 5px;
 }
 .div-icon {
-	width: 140px;
+  width: 120px;
 }
 @media (min-width: 550px) {
-	nav li,
-	nav li:nth-child(even),
-	nav li:nth-child(odd) {
-		display: inline-block;
-		width: auto;
-		float: none;
-		padding: 0;
-	}
-	nav a {
-		padding: 0em 1em;
-	}
+  nav li,
+  nav li:nth-child(even),
+  nav li:nth-child(odd) {
+    display: inline-block;
+    width: auto;
+    float: none;
+    padding: 0;
+  }
+  nav a {
+    padding: 0em 1em;
+  }
 }
 .nav-logo {
-	width: 60px;
+  width: 60px;
 }
+
+.product {
+  border: 2px solid rgb(226, 224, 224);
+  margin: 10px auto;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 20px;
+  width: 60%;
+}
+.product img {
+  width: 60%;
+  transition: all 0.5s ease-out;
+}
+.product:hover img {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+.product-details {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.add-btn button {
+  outline: none;
+  width: 70%;
+  border: none;
+  padding: 6px;
+  color: #fff;
+  background: #02788d;
+  transition: all 0.4s ease-in-out;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.add-btn button:hover {
+  background: rgba(61, 236, 8, 0.877);
+  cursor: pointer;
+}
+@media screen and (min-width: 550px) {
+  .product-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+  .product {
+    flex: 0 0 calc(100% / 6);
+    border: 1px solid lightgray;
+    margin: 20px;
+  }
+}
+
+/*
+.product-child{
+	min-height: 100px;
+	text-align: center;
+	border: 5px solid rgb(221, 207, 207);
+	
+} */
