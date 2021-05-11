@@ -1,26 +1,29 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Product = (props) => {
   const { item } = props;
-  return (
-    <div className="product">
-      <div className="img-box">
-        <Link to={`/details/${item.id}`}>
-          <img src={item.img} alt="" className="images" />
+  const products = useSelector((state) => state.productsAll.products);
+  const datarender = products.map((product) => {
+    const { id, name, Memory, price, img } = product;
+    return (
+      <div key={id} className="product">
+        <Link to={`/details/${id}`}>
+          <div className="img-box">
+            <img src={img} alt="" className="images" />
+          </div>
+          <div className="product-details">
+            <span> {name} </span>
+            <span> {Memory} </span>
+            <br />
+            <strong> {price} TL </strong>
+          </div>
         </Link>
       </div>
-      <div className="product-details">
-        <span> {item.name} </span>
-        <span> {item.Memory} </span>
-        <br />
-        <span> {Math.round(item.price)} tl </span>
-      </div>
-      <div className="add-btn">
-        <button>Add to cart</button>
-      </div>
-    </div>
-  );
+    );
+  });
+  return <> {datarender} </>;
 };
 
 export default Product;

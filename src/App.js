@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Cart from "./components/Cart";
 import Contact from "./components/Contact";
@@ -10,14 +10,26 @@ import Products from "./components/Products";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Switch>
-        <Route exact path="/"><Home /></Route>
-        <Route path="/products"><Products /></Route>
-        <Route path="/cart"><Cart /></Route>
-        <Route path="/details/:id"><Details /></Route>
-        <Route path="/contact"><Contact /></Route>
-      </Switch>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/products">
+            <Products />
+          </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/details/:id">
+            <Details />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

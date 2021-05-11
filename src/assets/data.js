@@ -17,7 +17,7 @@ const data_shop = [
     Memory: "32 Gb",
     ram: "6 Gb",
     price: "1400.00",
-    img: "https://www.linkpicture.com/q/iphone6_1.jpg",
+    img: "https://www.linkpicture.com/q/iphone6-1.jpg",
     date: "2018-01-05T19:52:46.267Z",
     color: "grey",
   },
