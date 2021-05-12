@@ -26,4 +26,9 @@ const Product = (props) => {
   return <> {datarender} </>;
 };
 
-export default Product;
+const mapState = state => {
+  return {
+    products: state.products,
+  }
+}
+export default (Product);

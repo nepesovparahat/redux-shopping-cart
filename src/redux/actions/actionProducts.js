@@ -2,7 +2,7 @@ import { actionTypes } from "../constants/actionType";
 
 export const setProducts = (products) => {
   return {
-    type: actionTypes.SET_PRODUCTS,
+    type: actionTypes.GET_ITEMS,
     payload: products,
   };
 };
