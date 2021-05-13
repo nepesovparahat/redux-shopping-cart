@@ -1,34 +1,29 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
-const Product = (props) => {
-  const { item } = props;
-  const products = useSelector((state) => state.productsAll.products);
-  const datarender = products.map((product) => {
-    const { id, name, Memory, price, img } = product;
-    return (
-      <div key={id} className="product">
-        <Link to={`/details/${id}`}>
-          <div className="img-box">
-            <img src={img} alt="" className="images" />
-          </div>
-          <div className="product-details">
-            <span> {name} </span>
-            <span> {Memory} </span>
-            <br />
-            <strong> {price} TL </strong>
-          </div>
-        </Link>
-      </div>
-    );
-  });
-  return <> {datarender} </>;
+import { setProducts } from "../redux/actions/actionProducts";
+const Product = ({ setProducts, product }) => {
+  const { id, name, Memory, price, img } = product;
+  return (
+    <div className="product">
+      <Link to={`/details/${id}`}>
+        <div className="img-box">
+          <img src={img} alt="" className="images" />
+        </div>
+        <div className="product-details">
+          <span> {name} </span>
+          <span> {Memory} </span>
+          <br />
+          <strong> {price} TL </strong>
+        </div>
+      </Link>
+    </div>
+  );
 };
 
-const mapState = state => {
+const mapDispatchProps = (dispatch) => {
   return {
-    products: state.products,
-  }
-}
-export default (Product);
+    setProducts: (products) => dispatch(setProducts(products)),
+  };
+};
+export default connect(null, mapDispatchProps)(Product);

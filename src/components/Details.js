@@ -1,14 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { productReducer } from "../redux/reducers/productReducer";
 
-const Details = (props) => {
+const Details = ({ productsAll, addToCart }) => {
   const { id } = useParams();
-  const product = useSelector((state) => state.productsAll.products);
-  let productDetails = product.find(
+  let productDetails = productsAll.products.find(
     (item) => parseInt(item.id) === parseInt(id)
   );
-  const { img, name, brand, Memory, price, date, ram } = productDetails;
+  const { img, name, brand, Memory, price, ram } = productDetails;
 
   return (
     <div className="details">
@@ -47,4 +47,8 @@ const Details = (props) => {
   );
 };
 
-export default Details;
+const mapStateProps = (state) => ({
+  productsAll: state.productsAll,
+});
+
+export default connect(mapStateProps, { productReducer })(Details);
