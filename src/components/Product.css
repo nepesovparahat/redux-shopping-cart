@@ -1,7 +1,7 @@
 .product {
   margin: 10px auto;
   text-align: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
   position: relative;
   padding: 15px;
@@ -16,7 +16,7 @@
 }
 
 .product:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: all 0.4s ease-in-out;
 }
 .product:hover .add-btn-div {
@@ -58,6 +58,10 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     margin: 0 auto;
+  }
+  .product:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
   }
   .product {
     flex: 0 0 calc(100% / 3);

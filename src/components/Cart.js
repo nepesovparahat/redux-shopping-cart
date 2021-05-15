@@ -3,12 +3,13 @@ import rmv from "../assets/images/remove.svg";
 import inc from "../assets/images/increase.png";
 import decr from "../assets/images/decrease.png";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import "../components/Cart.css";
 import {
   removeCart,
   itemIncrease,
   itemDecrease,
 } from "../redux/actions/actionProducts";
-import "../components/Cart.css";
 
 const Cart = ({ cart, removeCart, itemIncrease, itemDecrease }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -33,7 +34,7 @@ const Cart = ({ cart, removeCart, itemIncrease, itemDecrease }) => {
         <>
           {" "}
           <div className="cart-list-head">
-            <strong>Product</strong>
+            <strong className="head-product">Product</strong>
             <strong className="head-price">Price</strong>
             <strong className="head-total">Total</strong>
           </div>
@@ -60,16 +61,32 @@ const Cart = ({ cart, removeCart, itemIncrease, itemDecrease }) => {
                           <img src={inc} alt="increase" className="increase" />
                         </a>
                         <span>{item.quantity}</span>
-                        <a onClick={() => itemDecrease(item.id)}>
-                          <img src={decr} alt="decrease" className="decrease" />
-                        </a>
+                        {item.quantity === 1 ? (
+                          <a onClick={() => removeCart(item.id)}>
+                            <img
+                              src={decr}
+                              alt="decrease"
+                              className="decrease"
+                            />
+                          </a>
+                        ) : (
+                          <a onClick={() => itemDecrease(item.id)}>
+                            <img
+                              src={decr}
+                              alt="decrease"
+                              className="decrease"
+                            />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
                   <div className="hover-remove">
                     <div className="delete-product">
-                      <img src={rmv} alt="icon" onClick={() => removeCart(item.id)} className="rmv-icon"
-                      />
+                      <a onClick={() => removeCart(item.id)}>
+                        {" "}
+                        <img src={rmv} alt="icon" className="rmv-icon" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -83,6 +100,12 @@ const Cart = ({ cart, removeCart, itemIncrease, itemDecrease }) => {
         <div className="total-cart">
           <span className="total-text">Total:</span>
           <span>{totalPrice} TL</span>
+          <div className="check-div-btn">
+            <Link to="/products">
+              <button className="contine-btn">Contine Shopping</button>
+            </Link>
+            <button className="check-btn">Checkout Now</button>
+          </div>
         </div>
       )}
     </div>
@@ -95,4 +118,8 @@ const mapStateProps = (state) => {
   };
 };
 
-export default connect(mapStateProps, {removeCart,itemIncrease,itemDecrease})(Cart);
+export default connect(mapStateProps, {
+  removeCart,
+  itemIncrease,
+  itemDecrease,
+})(Cart);

@@ -8,10 +8,7 @@
   margin-right: 40px;
   font-size: 18px;
 }
-.head-price {
-  margin-left: 40px;
-}
-.head-total {
+.head-product {
   margin-left: 40px;
 }
 .cart-list-head {
@@ -47,7 +44,7 @@
 }
 .quantity {
   position: absolute;
-  right: 1.5rem;
+  right: 2.3rem;
 }
 
 .product-info {
@@ -82,11 +79,12 @@
   display: flex;
   font-size: 14px;
   margin-top: 30px;
-  padding-left: 15px;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  width: 30%;
 }
+
 .quantity-inside {
   align-items: center;
   display: flex;
@@ -106,7 +104,7 @@
   position: absolute;
 }
 .price-child {
-  margin-right: 90px;
+  margin-right: 60px;
 }
 .total {
   left: 80px;
@@ -114,28 +112,62 @@
 .total-cart {
   display: block;
   width: 100%;
-  height: 100px;
+  height: 120px;
   text-align: right;
-  padding-right: 50px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   background: rgb(231, 230, 230);
 }
 .total-text {
-  margin-right: 30px;
-  font-size: 20px;
+  font-size: 18px;
+}
+.total-cart span {
+  padding-right: 40px;
 }
 .quantity-inside a img {
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   outline: none;
-  border: none;
-  padding: 5px;
+  border: 2px solid rgb(177, 173, 173);
+  padding: 6px;
 }
 .quantity-inside a img:hover {
   background: #f8af10;
   cursor: pointer;
+  border: 2px solid #f8af10;
+}
+.check-div-btn {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+}
+.contine-btn,
+.check-btn {
+  border-radius: 5px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  width: 11rem;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+.contine-btn {
+  background: rgb(2, 59, 230);
+}
+.check-btn {
+  background: rgb(0, 170, 0);
+}
+.check-btn:hover {
+  cursor: pointer;
+  background: #2ac503;
+}
+.contine-btn:hover {
+  cursor: pointer;
+  background: #048cfc;
 }
 
 @media only screen and (min-width: 550px) {
@@ -143,14 +175,14 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .total-cart {
-    width: 70%;
-  }
 
   .product_inf_detail,
   .price {
     font-size: 20px;
     margin-top: 60px;
+  }
+  .product_inf_detail strong {
+    margin-right: 100px;
   }
   .cart-list {
     display: flex;
@@ -196,14 +228,13 @@
   }
   .total-cart {
     width: 70%;
-    height: 100px;
-    padding-right: 50px;
+    height: 140px;
     font-size: 20px;
   }
   .total-text {
-    margin-right: 50px;
     font-size: 24px;
   }
+
   .cart-list-head strong {
     margin-right: 150px;
     font-size: 24px;
@@ -221,5 +252,19 @@
   .rmv-icon {
     width: 2.4rem;
     height: 2.4rem;
+  }
+  .check-div-btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+  }
+  .contine-btn,
+  .check-btn {
+    width: 13rem;
+    font-size: 18px;
+    padding: 12px 18px;
+  }
+  .contine-btn {
+    margin-left: 10px;
   }
 }
