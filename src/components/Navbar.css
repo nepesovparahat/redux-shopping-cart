@@ -1,0 +1,135 @@
+nav ul {
+  list-style-type: none;
+  padding: 0.75em;
+  margin: 0;
+  overflow: auto;
+}
+/* splits nav into 2 columns
+  http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
+nav li:nth-child(even) {
+  width: 50%;
+  float: right;
+  padding: 0.5em;
+}
+nav li:nth-child(odd) {
+  width: 50%;
+  float: left;
+  padding: 0.5em;
+}
+nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding-left: 3.333333%;
+  font-size: 20px;
+}
+nav a:hover {
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li:nth-child(even) {
+  width: 50%;
+  float: right;
+}
+li:nth-child(odd) {
+  width: 50%;
+  float: left;
+}
+.nav .logobtn a img {
+  width: 120px;
+  margin-right: 5px;
+}
+.div-icon {
+  width: 120px;
+  background: #fff;
+  border: none;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.div-icon span,
+.links-nav span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.div-icon span {
+  color: black;
+}
+.cart {
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  flex-direction: column;
+  width: 28px;
+  height: 28px;
+  padding: 3px 0;
+  font-size: 18px;
+  align-items: center;
+  margin-right: 20px;
+}
+.cart-count {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+.cart-icon {
+  background-image: url("/src/assets/images/shop.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media (min-width: 550px) {
+  nav li,
+  nav li:nth-child(even),
+  nav li:nth-child(odd) {
+    display: inline-block;
+    width: auto;
+    float: none;
+    padding: 0;
+  }
+  .cart-icon {
+    width: 43px;
+    height: 43px;
+  }
+  .cart {
+    width: 28px;
+    height: 28px;
+  }
+  nav a {
+    padding: 0em 1em;
+  }
+  .div-icon {
+    padding: 0.5rem 1rem;
+    width: 170px;
+  }
+  .div-icon span,
+  .links-nav span {
+    font-size: 30px;
+  }
+}
+.nav-logo {
+  width: 60px;
+}
+nav .link-navigation {
+  flex-grow: 1;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #046f8a;
+}

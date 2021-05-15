@@ -1,11 +1,13 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { addToCart } from "../redux/actions/actionProducts";
 import { productReducer } from "../redux/reducers/productReducer";
+import "../components/Detail.css";
 
 const Details = ({ productsAll, addToCart }) => {
   const { id } = useParams();
-  let productDetails = productsAll.products.find(
+  let productDetails = productsAll.find(
     (item) => parseInt(item.id) === parseInt(id)
   );
   const { img, name, brand, Memory, price, ram } = productDetails;
@@ -38,7 +40,7 @@ const Details = ({ productsAll, addToCart }) => {
               <Link to="/products">
                 <button>Back to products</button>
               </Link>
-              <button>Add to cart</button>
+              <button onClick={() => addToCart(id)}>Add to cart</button>
             </div>
           </div>
         </div>
@@ -47,8 +49,10 @@ const Details = ({ productsAll, addToCart }) => {
   );
 };
 
-const mapStateProps = (state) => ({
-  productsAll: state.productsAll,
-});
+const mapStateProps = (state) => {
+  return {
+    productsAll: state.productsAll.products,
+  };
+};
 
-export default connect(mapStateProps, { productReducer })(Details);
+export default connect(mapStateProps, { productReducer, addToCart })(Details);

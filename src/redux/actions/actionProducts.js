@@ -7,15 +7,37 @@ export const setProducts = (products) => {
   };
 };
 
-export const addToCart = (itemID) => {
-  return {
+export const addToCart = (itemID) => (dispatch) => {
+  dispatch({
     type: actionTypes.ADD_ITEMS,
-    id: itemID,
-  };
+    payload: {
+      id: itemID,
+    },
+  });
 };
-export const removeCart = (itemID) => {
-  return {
+
+export const removeCart = (itemID) => (dispatch) => {
+  dispatch({
     type: actionTypes.DELETE_ITEMS,
-    id: itemID,
-  };
+    payload: {
+      id: itemID,
+    },
+  });
+};
+
+export const itemIncrease = (itemID) => (dispatch) => {
+  dispatch({
+    type: actionTypes.INCREASE_ITEM,
+    payload: {
+      id: itemID,
+    },
+  });
+};
+export const itemDecrease = (itemID) => (dispatch) => {
+  dispatch({
+    type: actionTypes.DECREASE_ITEM,
+    payload: {
+      id: itemID,
+    },
+  });
 };
