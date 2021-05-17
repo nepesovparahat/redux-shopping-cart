@@ -37,7 +37,7 @@ const Details = ({ productsAll, addToCart }) => {
               </div>
             </div>
             <div className="details-btn">
-              <Link to="/products">
+              <Link to="/">
                 <button>Back to products</button>
               </Link>
               <button onClick={() => addToCart(id)}>Add to cart</button>

@@ -101,7 +101,7 @@ const Cart = ({ cart, removeCart, itemIncrease, itemDecrease }) => {
           <span className="total-text">Total:</span>
           <span>{totalPrice} TL</span>
           <div className="check-div-btn">
-            <Link to="/products">
+            <Link to="/">
               <button className="contine-btn">Contine Shopping</button>
             </Link>
             <button className="check-btn">Checkout Now</button>

@@ -10,7 +10,7 @@ const Navbar = ({ cart }) => {
         <div className="link-navigation">
           <ul className="links-nav">
             <li>
-              <Link to="/products">
+              <Link to="/">
                 <span>Shopping Cart</span>
               </Link>
             </li>
@@ -19,7 +19,6 @@ const Navbar = ({ cart }) => {
         <Link to="/cart">
           <div className="div-icon">
             <span>Cart</span>
-
             <div className="cart-icon">
               <div className="cart">
                 <div className="cart-count">{cart.length}</div>

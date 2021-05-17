@@ -33,6 +33,7 @@ export const itemIncrease = (itemID) => (dispatch) => {
     },
   });
 };
+
 export const itemDecrease = (itemID) => (dispatch) => {
   dispatch({
     type: actionTypes.DECREASE_ITEM,
