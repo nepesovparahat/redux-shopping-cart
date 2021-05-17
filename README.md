@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+## Shopping Cart Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This shopping cart application demonstrates how React components and Redux can be used to create a user-friendly experience with instant visual updates and scalable code in e-commerce applications.
 
-## Available Scripts
+> ### 🎆✨ Live Demo: [Shopping Cart ](https://redux-shop-mobile.netlify.app/)
+---
 
-In the project directory, you can run:
+### Gif From Site
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/67821216/118515203-daff8900-b73d-11eb-9a86-e175df0364fa.gif)
+##
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies and tools used:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React JS](https://reactjs.org/docs/create-a-new-react-app.html)(Hooks) version : 17.0.2
+- [Redux](https://redux.js.org/introduction/getting-started) version : 4.1.0
+- [Redux-Thunk](https://www.npmjs.com/package/redux-thunk) version : 2.3.0
+- [Redux-Persist](https://www.npmjs.com/package/redux-persist) version: 6.0.0
 
-### `npm test`
+ #### This project was created with React and tools around React .
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I used Redux Hooks and with it I also used `redux-persist` to save some data to local storage, so when the user leaves the page, data such as items in the basket will not be lost or refreshed. Used pure CSS in the design creation phase.
 
-### `npm run build`
+---
+## Features
+- Add and remove items in the floating shopping cart
+- Products remain in floating basket after page reload
+- Responsive design
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+$ cd Redux-Shopping-Cart
+$ npm install
+$ npm start
+```
